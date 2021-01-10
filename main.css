@@ -1,0 +1,36 @@
+html {
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 1.25;
+}
+form {
+  display: flex;
+  align-items: center;
+  justify-content: center;  
+  width: 500px;
+  padding: 40px 10px;
+  margin-right: auto;
+  margin-left: auto;
+  background-color: antiquewhite;
+}
+
+input {
+  width: 100%;
+}
+
+ol {
+  padding: 0;
+  width: 500px;
+  margin-right: auto;
+  margin-left: auto;
+}
