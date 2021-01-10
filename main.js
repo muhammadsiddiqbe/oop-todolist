@@ -29,13 +29,13 @@ const MyTodo = new Todo()
 
 form.addEventListener('submit', evt => {
   evt.preventDefault()
-  list.innerHTML = null
-
+  
   let MyInputValue = inputTodo.value.trim()
-
+  
   if (!MyInputValue) {
     return
   }
+  list.innerHTML = null
 
   MyTodo.add = MyInputValue
   inputTodo.value = null
@@ -43,8 +43,18 @@ form.addEventListener('submit', evt => {
 
   todoArray.map(el => {
     let newLi = document.createElement('li')
-        newLi.textContent = el.todo
+        // newLi.textContent = el.todo
         newLi.dataset.id =  el.id
+        newLi.classList.add('todo')
+
+    let todoCheckbox = document.createElement('input')
+        todoCheckbox.setAttribute("type", "checkbox")
+        newLi.appendChild(todoCheckbox)
+
+    let newP = document.createElement('p')
+        newP.textContent = el.todo
+        newLi.appendChild(newP)
+
         list.appendChild(newLi)
   })
 })
