@@ -1,11 +1,13 @@
 html {
   box-sizing: border-box;
 }
+
 *,
 *::before,
 *::after {
   box-sizing: inherit;
 }
+
 body {
   padding: 0;
   margin: 0;
@@ -13,24 +15,134 @@ body {
   font-size: 16px;
   line-height: 1.25;
 }
-form {
+
+/* form {
   display: flex;
   align-items: center;
   justify-content: center;  
-  width: 500px;
+  width: 800px;
   padding: 40px 10px;
   margin-right: auto;
   margin-left: auto;
-  background-color: antiquewhite;
-}
+  background-color: skyblue;
+} */
 
-input {
+/* input {
   width: 100%;
 }
 
 ol {
   padding: 0;
-  width: 500px;
+  height: 600px;
+  width: 800px;
+  overflow: auto;
   margin-right: auto;
   margin-left: auto;
+} */
+
+.page-title {
+  margin: 10px 0;
+  font-weight: 200;
+  font-size: 80px;
+  text-align: center;
+  color: #af2f2f69;
+}
+
+.box {
+  background-color: #fff;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid #efefef;
+  box-shadow:
+    /* The top layer shadow */
+        0 1px 1px rgba(0,0,0,0.15),
+            /* The second layer */
+        0 10px 0 -5px #eee,
+            /* The second layer shadow */
+        0 10px 1px -4px rgba(0,0,0,0.15),
+            /* The third layer */
+        0 20px 0 -10px #eee,
+            /* The third layer shadow */
+        0 20px 1px -9px rgba(0,0,0,0.15);
+}
+
+.todos-input {
+  width: 100%;
+  padding: 15px 10px 10px 15px;
+  border: none;
+  outline: none;
+  font-size: 20px;
+}
+
+.todos {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.todo {
+  display: flex;
+  padding: 15px;
+  align-items: center;
+  border-top: 1px solid #ddd;
+  transition: box-shadow 0.3s ease;
+}
+
+.todo:hover {
+  box-shadow: 0 0 2px 1px rgba(0 , 0, 0, 0.4);
+}
+
+.todo__checkbox {
+  margin-right: 10px;
+}
+
+.todo p {
+  margin: 0;
+}
+
+.todo__button {
+  display: none;
+  margin-left: 25px;
+  margin-left: auto;
+  border: none;
+  font-weight: bold;
+  background: none;
+  color: #af2f2f69;
+  cursor: pointer;
+}
+
+.todo:hover .todo__button {
+  display: block;
+}
+
+li.complated p {
+  text-decoration: line-through;
+  color: #ccc;
+}
+
+@media only screen  and (max-width: 768px) {
+  .todo__button {
+    display: block;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #af2f2f69; 
+  border-radius: 25px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
 }
