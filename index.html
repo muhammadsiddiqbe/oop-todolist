@@ -4,18 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Todo App</title>
-  <!-- <link rel="stylesheet" href="./bootstrap.css"> -->
   <link rel="stylesheet" href="./main.css">
 </head>
 <body>
-
   <h1 class="page-title">itodos</h1>
-
 
   <div class="box">
     <form id="form" class="form" action="https:/echo.htmlacademy.ru" method="POST">
       <input class="todos-input" type="text" id="inputTodo" placeholder="Add todo" name="todoInput" autocomplete="off" required>
-      <!-- <button class="todo__button" type="submit">Add</button> -->
     </form>
   
     <ul class="todos" id="list">
@@ -23,18 +19,7 @@
     </ul>
   </div>
 
-  
-      <div class="box">
-        <input class="todos-input" type="text" onKeyUp={createTodo} placeholder="What needs to be done?" />
-        <ul class="todos">
-          <li class="todo" key={todo.id}>
-            <input class="todo__checkbox" type="checkbox" checked={todos.completed} onChange={complated} />
-            <p class=""></p>
-            <button class="todo__button">X</button>
-          </li>
-        </ul>
-      </div>
-  
+ 
   <script src="./main.js"></script>
 </body>
 </html>

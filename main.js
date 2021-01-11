@@ -55,6 +55,11 @@ form.addEventListener('submit', evt => {
         newP.textContent = el.todo
         newLi.appendChild(newP)
 
+    let newBtn = document.createElement('button')
+        newBtn.textContent = 'X'
+        newBtn.classList.add('todo__button')
+        newLi.appendChild(newBtn)
+
         list.appendChild(newLi)
   })
 })
